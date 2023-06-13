@@ -4,6 +4,7 @@ import Input from '../components/Input'
 import LoginForm from '../components/Form'
 import LoginSubmit from '../components/Submit'
 import LoginChangeSign from '../components/ChangeSign'
+import ForgotYourPassword from '../components/ForgotPassword'
 
 export default function Login() {
   return (
@@ -18,9 +19,9 @@ export default function Login() {
         />
       </Styled.LoginInputContent>
 
-      <Styled.LoginForgotYourPassword>
+      <ForgotYourPassword href='/#'>
         Forgot password?
-      </Styled.LoginForgotYourPassword>
+      </ForgotYourPassword>
 
       <LoginSubmit href='/'>Login</LoginSubmit>
       <LoginChangeSign href='/signup'>Sign Up</LoginChangeSign>
