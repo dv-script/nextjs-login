@@ -1,16 +1,17 @@
 import { PropsWithChildren } from 'react'
-import { ILoginForm } from './types'
+import { IForm } from './types'
 
 import * as Styled from './style'
 
 export default function Form({
   children,
   title,
-}: PropsWithChildren<ILoginForm>) {
+  onSubmit
+}: PropsWithChildren<IForm>) {
   return (
     <Styled.LoginSection>
       <Styled.LoginContainer>
-        <Styled.LoginBox>
+        <Styled.LoginBox onSubmit={onSubmit}>
           <Styled.LoginTitle>{title}</Styled.LoginTitle>
 
           {children}

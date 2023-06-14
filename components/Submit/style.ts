@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 
-export const LoginSubmit = styled(Link)`
+export const LoginSubmit = styled.button`
   cursor: pointer;
   font-size: 18px;
   text-transform: uppercase;

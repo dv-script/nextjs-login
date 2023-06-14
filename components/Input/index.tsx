@@ -4,15 +4,11 @@ import { BsFillEyeSlashFill } from 'react-icons/bs'
 
 import * as Styled from './style'
 
-import { IHandleChange, IHandleTogglePassword, IInput } from './types'
+import { IHandleTogglePassword, IInput } from './types'
 
-export default function Input({ label, type, ...props }: IInput) {
+export default function Input({ label, type, onChange, ...props }: IInput) {
   const [value, setValue] = useState('')
   const [showPassword, setShowPassword] = useState(false)
-
-  const handleChange = (event: IHandleChange) => {
-    setValue(event.target.value)
-  }
 
   const handleTogglePassword = (event: IHandleTogglePassword) => {
     event.preventDefault()
@@ -25,7 +21,7 @@ export default function Input({ label, type, ...props }: IInput) {
       <Styled.Input
         {...props}
         type={showPassword ? 'text' : type}
-        onChange={handleChange}
+        onChange={onChange}
       />
       {type === 'password' && value.length > 0 ? (
         <Styled.TogglePassword onClick={handleTogglePassword}>

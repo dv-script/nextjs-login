@@ -8,12 +8,16 @@ function createToken(user) {
     return jwt.sign({ email: user.email, name: user.name }, SECRET)
 }
 
-function verifyToken(token) {
+function readToken(token) {
     try {
         return jwt.verify(token, SECRET)
     } catch (error) {
         throw new Error('Invalid token')
     }
+}
+
+export function verifyToken(token) {
+    return readToken(token)
 }
 
 export function signUp(body) {

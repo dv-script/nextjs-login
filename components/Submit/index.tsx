@@ -1,8 +1,7 @@
 import { PropsWithChildren } from 'react'
 
 import * as Styled from './style'
-import { ISubmitProps } from './types'
 
-export default function Submit({ href, children }: PropsWithChildren<ISubmitProps>) {
-  return <Styled.LoginSubmit href={href}>{children}</Styled.LoginSubmit>
+export default function Submit({ children }: PropsWithChildren) {
+  return <Styled.LoginSubmit>{children}</Styled.LoginSubmit>
 }

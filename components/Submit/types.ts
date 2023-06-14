@@ -1,3 +1,1 @@
-export interface ISubmitProps {
-    href: string;
-}
+export interface ISubmitProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}

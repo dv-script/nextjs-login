@@ -4,7 +4,6 @@ export const LoginInputContent = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 1em;
 `
 
 export const LoginLabel = styled.label`

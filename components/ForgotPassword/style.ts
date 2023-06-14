@@ -6,6 +6,7 @@ export const ForgotYourPassword = styled(Link)`
   width: max-content;
   margin-left: auto;
   transition: 300ms;
+  margin-top: 0.5;
 
   :hover {
     color: #9d51f2;
