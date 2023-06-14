@@ -14,10 +14,8 @@ export default function SignUp() {
 
   const [formData, setFormData] = useState({
     name: '',
-    username: '',
     email: '',
     password: '',
-    phone: ''
   })
 
   const [error, setError] = useState('')
@@ -67,15 +65,6 @@ export default function SignUp() {
       />
 
       <Input
-        label='Username'
-        placeholder='Enter your username'
-        type='text'
-        value={formData.username}
-        onChange={(e) => {handleFormEdit(e, 'username')}}
-        required
-      />
-
-      <Input
         label='Email'
         placeholder='Enter your email'
         type='email'
@@ -90,15 +79,6 @@ export default function SignUp() {
         type='password'
         value={formData.password}
         onChange={(e) => {handleFormEdit(e, 'password')}}
-        required
-      />
-
-      <Input
-        label='Phone Number'
-        placeholder='Enter your phone number'
-        type='phone'
-        value={formData.phone}
-        onChange={(e) => {handleFormEdit(e, 'phone')}}
         required
       />
 

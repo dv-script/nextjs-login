@@ -14,7 +14,7 @@ import SignError from '../components/SignError'
 export default function Login() {
 
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: '',
   })
 
@@ -56,11 +56,11 @@ export default function Login() {
     >
       <Styled.LoginInputContent>
         <Input
-          label='Username'
-          placeholder='Type your username'
+          label='Email'
+          placeholder='Type your email'
           type='text'
-          value={formData.username}
-          onChange={(e) => {handleFormEdit(e, 'username')}}
+          value={formData.email}
+          onChange={(e) => {handleFormEdit(e, 'email')}}
           required
         />
 
